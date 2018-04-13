@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  root 'employers#index'
   resources :employers do
     member do
       get 'reset_password' => "employers#reset_password"
