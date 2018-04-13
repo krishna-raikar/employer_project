@@ -91,7 +91,9 @@ class EmployersController < ApplicationController
 
     # This function will return random token
     def random_token
-      rand(36**30).to_s(36)
+      # rand(36**30).to_s(36)
+      # length here is 26 chars
+      SecureRandom.hex(26)
     end
 
     def set_employer_by_token
